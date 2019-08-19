@@ -1,0 +1,56 @@
+{% extends 'layout.html' %}
+ 
+{% block content %}
+
+
+<div id = "canvas" style="left: 0; width: 100%; height:100%; position: absolute;">
+    <canvas id="canvas_view" class = "canvas"></canvas>
+</div>
+
+
+<div id = "flash-div">
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul class = flashes id = "flash">
+        {% for message in messages %}
+        <li> {{ message }}</li>
+        {% endfor %}
+    </ul>
+    
+    {% endif %}
+    {% endwith %}
+  </div>
+
+<script type="text/javascript" src="{{ url_for('static', filename='js/socketio_h.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/canvas.js') }}"></script>
+
+<script>
+    var room_id = {{ session.room_id }};
+    var id = {{ session.id }};
+    var dev_id = {{ session.dev_id }};
+    
+    document.getElementById("flash-div").onchange =
+      setTimeout(function() {
+        c = document.getElementById("flash-div").children;
+        for (i = 0; i < c.length; i++) {
+          c[i].innerHTML = "";
+        }
+        document.getElementById("flash-div").innerHTML = "";
+      }, 1500);
+
+    function flash(data){
+      document.getElementById("flash-div").innerHTML = "\
+           <ul class = flashes id = 'flash'>\
+            <li>" + data + "</li> \
+        </ul>";
+      setTimeout(function() {
+        document.getElementById("flash-div").innerHTML = "";
+      }, 1500);
+    }
+    sendMsg({
+        m: "sendingExpNum",
+        data: room_id
+    });
+</script>
+
+{% endblock %}

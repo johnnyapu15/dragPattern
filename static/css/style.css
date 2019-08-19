@@ -1,0 +1,241 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+
+body{
+    margin:auto;
+    background-color: rgb(240,240,240);
+    min-height: 100%;
+}
+
+h1, h2, h3, h4, p, page{
+    color: rgb(90, 90, 90);
+    text-align: center;
+    font-family:"Nanum Gothic", sans-serif;
+}
+
+.f:lang(en), page:lang(en), h1:lang(en), h2:lang(en), h3:lang(en), h4:lang(en), p:lang(en), a:lang(en){
+    font-family:"Oswald","Nanum Gothic", sans-serif;
+    
+}
+
+.canvas {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: 0;
+    top: 0;
+    background-color:#212529;
+  }
+.centered{
+    position: relative;
+    width:100%;
+    text-align: center;
+    margin: auto;
+    
+}
+h2{
+    text-align: left;
+}
+table{
+    text-align: center;
+}
+.log{
+    float:right;
+
+}
+.title{
+    color: rgb(255,255,255);
+    background-color: rgb(0,0,0);
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    margin:auto;
+}
+
+.flash{   
+    
+    text-align:center;
+    display:inline;
+    border-left: 22.5px solid rgb(120,120,120);
+    padding-left:5px;
+}
+
+.box{
+    margin:auto;
+    max-width: 550px;
+    margin-bottom: 80px;
+    margin-top:55px;
+    color:rgb(120,120,120);
+}
+
+.f, .getting{
+    display: block;
+    margin:auto;
+    text-align:center;
+    max-width: 250px;
+
+}
+
+.hrefText {
+    padding: 4px;
+    text-decoration: none;
+    color: rgb(90, 90, 90);
+    border: 2px solid;
+    
+}
+.footer {
+  position: fixed;
+  bottom:0;
+  width:100%;
+  padding: 4px;
+  padding-left: 0px;
+  padding-right: 0px;
+  background-color: rgb(90,90,90);
+  border:0px;
+  margin: 0;
+  color:white;
+  text-align: center;
+  font-family:"Oswald", sans-serif;
+}
+
+.header{
+    position: fixed;
+    top: 0px;
+    width: 100%;
+}
+
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  .topnav a:visited {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:active {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.show {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  .tabcontent {
+    display: none;
+    
+  }
+  .tablinks {
+    cursor: pointer;
+    z-index: 1;
+  }
+  .dropdown {
+    float: left;
+    position: absolute;
+    display: inline-block;
+    z-index: 1;
+
+  }
+  .dropbtn {
+    z-index: 1;
+
+    position: absolute;
+  }
+  .dropdown-content {
+    display: none;
+    position:absolute;
+    background-color: #f9f9f9;
+    box-shadow:0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+  
+  }
+
+  .show {display:block;}
+
+  .flashes {
+    z-index: 1;
+    position: absolute;
+    border-radius: 5px;
+    background-color: rgba(240, 255, 255, 0.7);
+    margin-left: 20px;
+    padding-right: 20px;
+    margin-top:100px;
+    padding-left: 20px;
+  }
+
+  /* modal css */
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0, 0.4);
+  }
+  .modal-content {
+    background-color: paleturquoise;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+  }
+
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+  .ntp {
+    border:1px solid #dedede; 
+    color:#666;
+    font-size:20px; 
+    text-align:center;
+  }
+
+  
